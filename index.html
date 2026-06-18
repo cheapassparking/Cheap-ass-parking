@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheap Ass Parking — Don't Pay a Horse's Price for Parking</title>
+  <meta name="description" content="Find cheap parking anywhere. Airport, cruise, downtown, and event parking. Reserve online in 60 seconds and save up to 50%. The Booking.com of Parking." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cheap Ass Parking — Don't Pay a Horse's Price for Parking" />
+  <meta property="og:description" content="Find cheap parking anywhere. Airport, cruise, downtown, and event parking. Reserve online and save up to 50%." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2316181f'/><text x='50' y='72' font-size='64' text-anchor='middle' fill='%23ffc83d' font-family='Arial' font-weight='bold'>P</text></svg>" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Cheap Ass Parking home">
+        <span class="brand__mark" aria-hidden="true">P</span>
+        <span class="brand__name">Cheap Ass <em>Parking</em></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#categories">Where to park</a>
+        <a href="#how">How it works</a>
+        <a href="#spots">Popular spots</a>
+        <a href="#list">List your lot</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--ghost" href="#">Sign in</a>
+        <a class="btn btn--solid" href="#search">Find parking</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="search">
+    <div class="hero__lines" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">The Booking.com of parking</p>
+      <h1 class="hero__title">Don't pay a horse's<br />price for parking</h1>
+      <p class="hero__sub">
+        Cheap parking for airports, cruise ports, downtowns, and events.
+        Compare nearby lots, reserve in 60 seconds, and pocket up to <strong>50% off</strong> the gate price.
+      </p>
+
+      <!-- Search card -->
+      <form class="search" id="searchForm" novalidate>
+        <div class="search__field">
+          <label for="destination">Where are you headed?</label>
+          <input id="destination" name="destination" type="text" placeholder="City, airport, or cruise port" autocomplete="off" />
+        </div>
+
+        <div class="search__field search__field--type">
+          <label for="ptype">Parking for</label>
+          <select id="ptype" name="ptype">
+            <option value="airport">Airport</option>
+            <option value="cruise">Cruise port</option>
+            <option value="event">Event or game</option>
+            <option value="downtown">Downtown</option>
+            <option value="monthly">Monthly / long-term</option>
+          </select>
+        </div>
+
+        <div class="search__field search__field--date">
+          <label for="from">Drop off</label>
+          <input id="from" name="from" type="date" />
+        </div>
+
+        <div class="search__field search__field--date">
+          <label for="to">Pick up</label>
+          <input id="to" name="to" type="date" />
+        </div>
+
+        <button class="search__go" type="submit">Find parking</button>
+      </form>
+
+      <p class="search__note" id="searchNote" role="status" aria-live="polite"></p>
+
+      <ul class="trust" aria-label="Why book with us">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/></svg> Reserved spot, guaranteed</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 13 5 5L20 6"/></svg> Free cancellation</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M5 6h10a3 3 0 0 1 0 6H7a3 3 0 0 0 0 6h11"/></svg> Up to 50% off gate prices</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section categories" id="categories">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow eyebrow--dark">Park anywhere</p>
+        <h2 class="section__title">Wherever you're going, we've got the cheap seats</h2>
+      </header>
+
+      <div class="cat-grid">
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">✈</span>
+          <h3>Airport parking</h3>
+          <p>Skip the daily-rate robbery. Park near the terminal, shuttle included.</p>
+          <span class="cat__link">Find airport lots →</span>
+        </a>
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">🚢</span>
+          <h3>Cruise port parking</h3>
+          <p>Leave the car, board the boat. Secure lots steps from the terminal.</p>
+          <span class="cat__link">Find cruise lots →</span>
+        </a>
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">🏙</span>
+          <h3>Downtown parking</h3>
+          <p>Reserve a garage spot before you drive in. No circling the block.</p>
+          <span class="cat__link">Find downtown spots →</span>
+        </a>
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">🎟</span>
+          <h3>Event &amp; game parking</h3>
+          <p>Concerts, games, festivals. Lock in a spot before prices surge.</p>
+          <span class="cat__link">Find event spots →</span>
+        </a>
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">🏨</span>
+          <h3>Hotel &amp; stay parking</h3>
+          <p>Why pay the hotel's $45 valet? Park nearby for a fraction.</p>
+          <span class="cat__link">Find hotel spots →</span>
+        </a>
+        <a class="cat" href="#search">
+          <span class="cat__icon" aria-hidden="true">📅</span>
+          <h3>Monthly &amp; long-term</h3>
+          <p>Commuting or storing the car? Lock in a low monthly rate.</p>
+          <span class="cat__link">Find monthly rates →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section how" id="how">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow">Dead simple</p>
+        <h2 class="section__title section__title--light">Three steps. Then keep the difference.</h2>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3>Tell us where</h3>
+          <p>Pop in your destination and dates. We scan every lot, garage, and driveway nearby.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3>Pick your price</h3>
+          <p>Compare real-time rates side by side. Sort by cheap-ass, distance, or rating.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3>Park &amp; save</h3>
+          <p>Reserve online, show your phone at the gate, park, and pocket what you saved.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SAVINGS / WHY ============ -->
+  <section class="section why">
+    <div class="wrap why__inner">
+      <div class="why__pitch">
+        <p class="eyebrow eyebrow--dark">Why "horse's price"?</p>
+        <h2 class="section__title">A horse needed hay, a barn, and a stable hand.</h2>
+        <p class="why__lead">
+          Your car just needs a flat patch of asphalt. So why are you still paying stable
+          prices at the gate? We line up every nearby option so the cheap spot finds you —
+          not the other way around.
+        </p>
+        <ul class="why__list">
+          <li><strong>Real prices, no games.</strong> The rate you see is the rate you pay.</li>
+          <li><strong>No surprise fees.</strong> Taxes and totals shown up front.</li>
+          <li><strong>Verified lots.</strong> Real reviews from real drivers.</li>
+          <li><strong>Cancel anytime.</strong> Plans change. Refunds shouldn't be a fight.</li>
+        </ul>
+      </div>
+
+      <div class="ticket" aria-hidden="true">
+        <div class="ticket__top">
+          <span>PARKING RECEIPT</span>
+          <span>★ CHEAP ASS</span>
+        </div>
+        <div class="ticket__row"><span>Gate price</span><span class="ticket__strike">$38.00</span></div>
+        <div class="ticket__row"><span>Cheap Ass price</span><span>$19.00</span></div>
+        <div class="ticket__perf"></div>
+        <div class="ticket__row ticket__row--big"><span>You saved</span><span>$19.00</span></div>
+        <div class="ticket__stamp">50% OFF</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR SPOTS ============ -->
+  <section class="section spots" id="spots">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow eyebrow--dark">Hot right now</p>
+        <h2 class="section__title">Popular spots, cheap-ass prices</h2>
+      </header>
+
+      <div class="spot-grid" id="spotGrid">
+        <!-- cards injected by script.js -->
+      </div>
+      <p class="spots__disclaimer">Sample listings shown. Live inventory and pricing vary by date and location.</p>
+    </div>
+  </section>
+
+  <!-- ============ OUR PROMISE ============ -->
+  <section class="section quotes">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow eyebrow--dark">The promise</p>
+        <h2 class="section__title">What you get, every single time</h2>
+      </header>
+      <div class="quote-grid">
+        <blockquote class="quote">
+          <p><strong>The cheap price, first.</strong> Lots are ranked by what they actually cost — not by who paid to sit on top.</p>
+        </blockquote>
+        <blockquote class="quote">
+          <p><strong>Your money back if plans change.</strong> Free cancellation up to the cutoff on your booking. No fight, no fine print.</p>
+        </blockquote>
+        <blockquote class="quote">
+          <p><strong>The number you see is the number you pay.</strong> Taxes and fees are baked in before checkout — no surprises at the gate.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA / LIST YOUR LOT ============ -->
+  <section class="cta" id="list">
+    <div class="wrap cta__inner">
+      <div class="cta__text">
+        <h2>Got an empty lot, garage, or driveway?</h2>
+        <p>Turn that asphalt into income. List your space free and we'll fill it.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--dark" href="#">List your space</a>
+        <a class="btn btn--line" href="#search">Find parking</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#top">
+          <span class="brand__mark" aria-hidden="true">P</span>
+          <span class="brand__name">Cheap Ass <em>Parking</em></span>
+        </a>
+        <p class="footer__tag">Don't pay a horse's price for parking.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Park">
+        <h4>Park</h4>
+        <a href="#categories">Airport</a>
+        <a href="#categories">Cruise port</a>
+        <a href="#categories">Downtown</a>
+        <a href="#categories">Events</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="#how">How it works</a>
+        <a href="#list">List your lot</a>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Support">
+        <h4>Support</h4>
+        <a href="#">Help center</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© <span id="year"></span> Cheap Ass Parking. All rights reserved.</span>
+      <span>Made for people who hate overpaying.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
